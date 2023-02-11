@@ -17,7 +17,10 @@ class AutorFactory extends Factory
     public function definition()
     {
         return [
-            //
+            'imeAutora'=>$this->faker->firstName(),
+            'prezimeAutora'=>$this->faker->lastName(),
+            'datumRodjenja'=>$this->faker->date(),
+            'pol'=>$this->faker->randomElement(['muski','zenski'])
         ];
     }
 }

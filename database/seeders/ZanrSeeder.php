@@ -2,6 +2,7 @@
 
 namespace Database\Seeders;
 
+use App\Models\Zanr;
 use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
 
@@ -14,6 +15,6 @@ class ZanrSeeder extends Seeder
      */
     public function run()
     {
-        //
+        Zanr::factory(5)->create();
     }
 }
