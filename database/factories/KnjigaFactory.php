@@ -24,9 +24,13 @@ class KnjigaFactory extends Factory
             'godinaIzdanja'=>$this->faker->year(),
             'brojStrana'=>$this->faker->numberBetween($min=50, $max=300),
             'opis'=>$this->faker->sentence(),
-            'autor_id'=>Autor::factory(),
-            'zanr_id'=>Zanr::factory(),
-            'user_id'=>User::factory()
+            'user_id'=>User::factory(),
+            'autor_id'=>function(){
+                return Autor::all()->random();
+            },
+            'zanr_id'=>function(){
+                return Zanr::all()->random();
+            }
         ];
     }
 }

@@ -15,6 +15,6 @@ class ZanrSeeder extends Seeder
      */
     public function run()
     {
-        Zanr::factory(5)->create();
+        Zanr::factory(10)->create();
     }
 }
