@@ -12,7 +12,8 @@ class Knjiga extends Model
     protected $fillable = [
         'nazivKnjige',
         'godinaIzdanja',
-        'brojStrana'
+        'brojStrana',
+        'opis'
     ];
 
     public function autor(){
